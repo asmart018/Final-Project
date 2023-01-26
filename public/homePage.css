@@ -1,0 +1,55 @@
+body {
+  background-image: linear-gradient(to right, rgb(0, 0, 0), white);
+  color: #96c4f1;
+}
+
+a {
+  text-decoration: none;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.centered {
+  justify-content: center;
+}
+
+h3,
+p {
+  text-align: center;
+  text-shadow: 1px 1px 1px black;
+}
+
+.navbar-nav {
+  align-items: center;
+}
+
+ul .navbar-brand {
+  width: 80%;
+  margin: auto;
+}
+
+ul .navbar-brand img {
+  width: 100%;
+}
+
+.stickDiv {
+  margin: 40px 0px;
+}
+
+.stick {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25), 0 6px 20px 0 rgba(0, 0, 0, 0.22);
+  min-width: 90%;
+}
+
+@media screen and (min-width: 576px) {
+  #navigation {
+    justify-content: space-between;
+  }
+
+  ul .navbar-brand img {
+    content: url("Astranimus_Symbol_White.png");
+    width: 60px;
+  }
+}

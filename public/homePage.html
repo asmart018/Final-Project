@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1" />
+    <title>Home</title>
+    <script
+      src="https://kit.fontawesome.com/c908af944b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.cdnfonts.com/css/alien-league-2"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link href="/register.css" rel="stylesheet" />
+    <link href="/homePage.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <div class="container-fluid centered">
+        <ul class="navbar-nav">
+          <a class="navbar-brand" href="/">
+            <img src="/Astranimus_SecondaryLogo_White.png" alt="Brand logo" />
+          </a>
+          <% if (name) {%>
+          <li class="nav-link"><a href="/logout">Logout</a></li>
+          <%} else {%>
+          <li class="nav-link"><a href="/login">Login</a></li>
+          <li class="nav-link"><a href="/register">Register</a></li>
+          <% } %>
+        </ul>
+      </div>
+    </nav>
+    <br />
+    <div class="d-flex centered">
+      <% if (admin == 1) {%>
+      <h3>Welcome admin: <%= name %></h3>
+      <%} else if (name){%>
+      <h3>Welcome back, <%= name %></h3>
+      <%} else{%>
+      <h3>Astranimus Broomball introduces the Astral!</h3>
+      <%}%>
+    </div>
+    <div class="d-flex centered stickDiv">
+      <img
+        src="Stick 1 centered.jpeg"
+        alt="Stick image"
+        class="img-fluid stick"
+      />
+    </div>
+    <p>
+      A full carbon fiber shaft weighing ~237 grams for the 46" and ~263 grams
+      for the 52" makes this stick one of the lightest on the market. At a price
+      point of $190 and $210, the Astral rivals the very popular BlueOx Katana.
+      The shaft has a comparable flex of 90 for a hockey stick. With enough
+      interest in the Astral, a flex version can be developed.
+    </p>
+    <video class="w-100" controls autoplay muted>
+      <source src="Stick video.mp4" type="video/mp4" />
+    </video>
+  </body>
+</html>

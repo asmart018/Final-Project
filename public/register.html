@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1" />
+    <title>Register</title>
+    <script
+      src="https://kit.fontawesome.com/c908af944b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.cdnfonts.com/css/alien-league-2"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link href="/register.css" rel="stylesheet" />
+    <link href="/homePage.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <div class="container-fluid" id="navigation">
+        <ul class="navbar-nav">
+          <a class="navbar-brand" href="/">
+            <img src="/Astranimus_SecondaryLogo_White.png" alt="Brand logo" />
+          </a>
+          <li class="nav-link"><a href="/">Home</a></li>
+          <li class="nav-link"><a href="/login">Login</a></li>
+        </ul>
+      </div>
+    </nav>
+    <% if (message) { %>
+    <div
+      class="<%= messageClass == 'success' ? 'alert alert-success alert-dismissible fade show' : 'alert alert-danger alert-dismissible fade show' %>"
+    >
+      <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+      <%= message%>
+    </div>
+    <% } %>
+    <div class="register container container-md">
+      <h1>Register</h1>
+      <form method="post">
+        <div class="row row-cols-1 row-cols-md-2">
+          <div class="input-group">
+            <!-- First Name input -->
+            <label for="first_name">
+              <i class="fas fa-user"></i>
+            </label>
+            <input
+              type="text"
+              name="first_name"
+              placeholder="First name"
+              id="first_name"
+              required
+            />
+          </div>
+          <div class="input-group">
+            <!-- Last Name input -->
+            <label for="last_name">
+              <i class="fas fa-user"></i>
+            </label>
+            <input
+              type="text"
+              name="last_name"
+              placeholder="Last name"
+              id="last_name"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="row row-cols-1 row-cols-2">
+          <div class="input-group">
+            <!-- Street input -->
+            <label for="street">
+              <i class="fas fa-address-book"></i>
+            </label>
+            <input
+              type="text"
+              name="street"
+              placeholder="123 Main Street"
+              id="street"
+              required
+            />
+          </div>
+          <div class="input-group">
+            <!-- City input -->
+            <label for="city">
+              <i class="fas fa-address-book"></i>
+            </label>
+            <input
+              type="text"
+              name="city"
+              placeholder="Cincinnati"
+              id="city"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="row row-cols-1 row-cols-2">
+          <div class="input-group">
+            <!-- State input -->
+            <label for="state">
+              <i class="fas fa-address-book"></i>
+            </label>
+            <input
+              type="text"
+              name="state"
+              placeholder="Ohio"
+              id="state"
+              required
+            />
+          </div>
+          <div class="input-group">
+            <!-- Phone Number input -->
+            <label for="phone_number">
+              <i class="fas fa-phone"></i>
+            </label>
+            <input
+              type="text"
+              name="phone_number"
+              placeholder="555-555-1234"
+              id="phone_number"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-2">
+          <div class="input-group">
+            <!-- Email input -->
+            <label for="email">
+              <i class="fas fa-envelope"></i>
+            </label>
+            <input
+              type="text"
+              name="email"
+              placeholder="email@email.com"
+              id="email"
+              required
+            />
+          </div>
+          <div class="input-group">
+            <!-- Password input -->
+            <label for="password">
+              <i class="fas fa-lock"></i>
+            </label>
+            <input
+              type="password"
+              name="password"
+              placeholder="Password"
+              id="password"
+              required
+            />
+          </div>
+        </div>
+        <input type="submit" value="Register" />
+      </form>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
